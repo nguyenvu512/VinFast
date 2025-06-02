@@ -1,0 +1,172 @@
+.container-pin {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.pin-wrapper {
+  width: 1400px;
+  padding-top: 0px !important;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+.pin-block-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+}
+
+.intro-wrapper-pin {
+  display: flex;
+  justify-content: center; /* căn giữa ngang */
+  gap: 24px;
+  flex-wrap: wrap; /* giúp không vỡ layout trên màn nhỏ */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.intro-box-pin {
+  width: 700px;
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  color: white;
+}
+
+.pin-oto {
+  background-image: url("https://vinfastauto.com/themes/porto/img/homepage-v2/pin-oto-2.webp");
+}
+
+.pin-xemay {
+  background-image: url("https://vinfastauto.com/themes/porto/img/homepage-v2/pin-xe-may.webp");
+}
+
+.card-content-pin {
+  background: linear-gradient(359deg, #000 0.54%, rgba(0, 0, 0, 0) 98.5%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(65%); /* ẩn 1 phần ban đầu */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  color: #fff;
+  padding: 1.875rem;
+  opacity: 0.8;
+}
+
+.intro-box-pin:hover .card-content-pin {
+  transform: translateY(0); /* đẩy lên */
+  opacity: 1;
+}
+
+.field-title-pin {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.field-detail-pin {
+  font-size: 1rem;
+  padding: 0.8rem 0 0 0;
+}
+.field-view-more-pin {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.075rem;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 14px;
+  /* transform: translateY(10px) */
+}
+
+.intro-box-pin:hover .field-view-more-pin .field-detail-pin {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .pin-wrapper {
+    flex-direction: column;
+    align-items: center; /* căn giữa các khối theo chiều ngang */
+  }
+
+  .pin-block-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-wrapper-pin {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .intro-box-pin {
+    max-width: 460px;
+    padding: 10px;
+  }
+}
+/* /////////////////////////// */
+.pin-block-2 {
+  background-color: #f7f9f9;
+  padding: 20px 30px;
+  height: 100%;
+  cursor: pointer;
+}
+.cart-sacpin {
+  height: 100%;
+  overflow: hidden; /* ngăn ảnh tràn ra */
+}
+.cart-sacpin-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.cart-sacpin-desc {
+  font-size: 1rem;
+  padding: 1rem 0 0 0;
+  opacity: 0.9;
+}
+.cart-sacpin-viewmore {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #1464f4;
+  padding: 1rem 0 0 0;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.cart-sacpin-img {
+  margin-top: 3rem;
+  height: 100%;
+  position: relative;
+}
+
+.cart-sacpin-img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+@media (max-width: 768px) {
+  .cart-sacpin-img {
+    padding-top: 90%; /* giảm chiều cao khi mobile */
+  }
+  .pin-wrapper {
+    padding: 0px;
+  }
+  .cart-sacpin-img img {
+    width: 100%;
+    height: auto;
+  }
+}

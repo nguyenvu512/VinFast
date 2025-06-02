@@ -1,0 +1,237 @@
+.carousel-container-xemay {
+  max-width: 1400px;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgba(255, 255, 255, 0.6); /* nền bán trong */
+  margin-bottom: 0px !important;
+}
+.container-xemay-root {
+  width: 100%;
+  margin: 10px auto;
+  padding: 0 24px;
+  background-color: white;
+  margin-bottom: 0px !important;
+}
+/* Ảnh ô tô */
+.carousel-img-oto {
+  width: 70% !important;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+/* Khi màn hình nhỏ hơn 768px (tablet, mobile) */
+@media (max-width: 767.98px) {
+  .carousel-img-oto {
+    width: 100% !important; /* hoặc width: 100% nếu muốn full */
+  }
+}
+/* Thông tin xe */
+.carousel-caption-box-xemay {
+  background-color: rgba(255, 255, 255, 0.6); /* nền bán trong */
+  margin-top: 0 !important;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Nút điều hướng */
+.carousel-control-prev-oto,
+.carousel-control-next-oto {
+  width: 48px !important;
+  height: 48px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background-color: transparent !important;
+  color: black !important;
+  border-radius: 50% !important;
+  z-index: 10 !important;
+  transition: all 0.3s ease !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 234, 234) !important;
+}
+
+.carousel-control-prev-oto:hover,
+.carousel-control-next-oto:hover {
+  background-color: #1464f4 !important;
+  color: white !important;
+}
+
+.carousel-control-prev-oto span,
+.carousel-control-next-oto span {
+  filter: invert(0%) !important; /* icon màu đen */
+}
+
+.carousel-control-prev-oto:hover span,
+.carousel-control-next-oto:hover span {
+  filter: invert(100%) !important; /* icon chuyển trắng */
+}
+
+/* Vị trí 2 nút */
+.carousel-control-prev-oto {
+  top: 60% !important;
+  left: 30px !important; /* luôn cách mép trái 30px */
+}
+
+.carousel-control-next-oto {
+  top: 60% !important;
+  right: 30px !important; /* luôn cách mép phải 30px */
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .carousel-control-prev-oto {
+    left: 130px !important;
+    top: 280px !important;
+  }
+
+  .carousel-control-next-oto {
+    right: 130px !important;
+    top: 280px !important;
+  }
+  .carousel-img-oto {
+    margin-bottom: 50px;
+  }
+}
+
+/* Indicators */
+.carousel-indicators-xemay {
+  margin-top: 16px;
+  justify-content: center !important;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.carousel-indicators-xemay button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: rgb(213, 213, 213) !important;
+  margin: 0 4px !important;
+  border: none !important;
+  opacity: 1;
+}
+
+.carousel-indicators-xemay .active {
+  background-color: #1464f4 !important;
+}
+
+.carousel-caption-box-oto-title {
+  font-size: 1rem;
+  font-weight: 500 !important;
+  line-height: 140%;
+  opacity: 0.9;
+}
+.carousel-caption-box-oto-desc {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: normal;
+  opacity: 0.8;
+}
+
+.btn-custom-carousel {
+  position: relative;
+  height: 50px;
+  width: 200px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #1464f4;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
+  /* margin: 0 4px; */
+  margin: 0 !important;
+}
+
+.btn-custom-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Nút ĐẶT CỌC: nền xanh, chữ trắng. Hover chạy nền trắng từ trái, quá đà */
+.btn-datcoc {
+  background-color: #1464f4;
+  color: white;
+}
+
+.btn-datcoc::before {
+  background-color: white;
+  left: 0;
+  transform-origin: left;
+}
+
+.btn-datcoc:hover::before {
+  animation: slideOverLeft 0.6s forwards;
+}
+/* Hover ra: trở lại trạng thái ban đầu */
+.btn-datcoc:not(:hover)::before {
+  animation: slideBackLeft 0.6s forwards;
+}
+.btn-datcoc:hover {
+  color: #1464f4;
+}
+
+/* Nút XEM CHI TIẾT: nền trắng, chữ xanh. Hover chạy nền xanh từ phải, quá đà */
+.btn-xemchitiet {
+  background-color: white;
+  color: #1464f4;
+}
+
+.btn-xemchitiet::before {
+  background-color: #1464f4;
+  left: 0;
+  transform-origin: left;
+}
+
+.btn-xemchitiet:hover::before {
+  animation: slideOverLeft 0.6s forwards;
+}
+.btn-xemchitiet:not(:hover)::before {
+  animation: slideBackLeft 0.6s forwards;
+}
+.btn-xemchitiet:hover {
+  color: white;
+}
+
+/* Keyframe hiệu ứng trượt quá đà từ trái */
+@keyframes slideOverLeft {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  75% {
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Lùi lại về bên trái */
+@keyframes slideBackLeft {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+#heroSliderXemay .carousel-item {
+  transition: opacity 0.01s linear !important;
+}
