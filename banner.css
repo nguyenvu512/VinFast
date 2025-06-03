@@ -27,17 +27,24 @@
   }
 }
 .swiper-slice-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  flex-shrink: 0;
   height: 100%;
-  position: relative;
-  display: none;
-  opacity: 0;
+  opacity: 0.9; /* ← CHỈNH Ở ĐÂY */
+  visibility: hidden;
+  z-index: 0;
+  transition: opacity 3s ease, visibility 3s ease;
 }
-.swiper-active {
-  display: block;
+
+.swiper-slice-banner.swiper-active {
   opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  position: relative;
 }
+
 .swiper-slice-banner a::after {
   content: "";
   background: linear-gradient(
